@@ -19,11 +19,16 @@ function Person(name, age) {
   this.name = name;
   this.age = age;
 }
+
+Person.prototype.talk = function () {
+  console.log(`Hi, my name is ${this.name}`);
+};
+
 let p1 = new Person("sarita", 23);
 let p2 = new Person("Ayushi", 23);
 
 console.log(p1, p2);
-
+console.log(p1.talk === p2.talk);
 // const accountInfo = {
 //   username: "Sarita",
 //   age: 23,
